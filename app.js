@@ -1,15 +1,18 @@
 // task  1
-// const emptyObj = {};
+console.log(`
+task 1
+    `);
 
-// const notEmptyObj = {
-//     name: 'nigga'
-// }
+const emptyObj = {};
 
-
-// isObjEmpty(emptyObj);
-// isObjEmpty(notEmptyObj);
+const notEmptyObj = {
+    name: 'nigga'
+}
 
 let isEmpty;
+
+console.log(isObjEmpty(emptyObj));
+console.log(isObjEmpty(notEmptyObj));
 
 function isObjEmpty(object) {
     // var 1
@@ -39,6 +42,9 @@ function isObjEmpty(object) {
 }
 
 //task 2
+console.log(`
+task 2
+    `);
 
 const obj1 = {
     a: 230, 
@@ -77,7 +83,35 @@ console.log('sumAllKeyObj1', sumAllKeyObj1);
 console.log('sumAllKeyObj2', sumAllKeyObj2);
 console.log('sumAllKeyObj3', sumAllKeyObj3);
 
+// task 3
+console.log(`
+task 3
+    `);
 
+const objOriginal = {
+    name: 'Mark',
+    surname: 'Wolf',
+    greeting: function () {
+        console.log('Hello World!');
+    }
+};
+
+const objCopy = {};
+
+for (let key in objOriginal) {
+    let value = objOriginal[key];
+    objCopy[key] = value;
+}
+
+objCopy.greeting = function () {
+    console.log('Goodbye!');
+};
+
+console.log(objOriginal);
+objOriginal.greeting();
+
+console.log(objCopy);
+objCopy.greeting();
 
 //* 1) Проверка объекта на пустоту -> {} 
 //* isEmpty(obj) =>
